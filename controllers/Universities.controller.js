@@ -1,6 +1,10 @@
-import axios from 'axios';
-import { createClient } from 'pexels';
-export const getAllUniversity = async (req, res) => {
+// import axios from 'axios';
+// import { createClient } from 'pexels';
+
+const axios = require('axios');
+const { createClient } = require('pexels');
+
+exports.getAllUniversity = async (req, res) => {
   var options = {
     method: 'GET',
     url: 'http://universities.hipolabs.com/search',
@@ -32,3 +36,5 @@ export const getAllUniversity = async (req, res) => {
     });
   }
 };
+
+// module.export = getAllUniversity;

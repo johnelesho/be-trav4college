@@ -1,8 +1,10 @@
-import express from 'express';
-import { getAllUniversity } from '../controllers/Universities.controller.js';
+// import express from 'express';
+// import { getAllUniversity } from '../controllers/Universities.controller.js';
 
+const express = require('express');
+const { getAllUniversity } = require('../controllers/Universities.controller');
 const universityRoutes = express.Router();
 
 universityRoutes.get('/', getAllUniversity);
 
-export default universityRoutes;
+module.exports = universityRoutes;

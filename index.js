@@ -5,14 +5,14 @@
 // import universityRoutes from './routes/university.route.js';
 
 const express = require('express');
-const config = require('config');
+// const config = require('config');
 const morgan = require('morgan');
 const logger = require('./middlewares/logger');
 const universityRoutes = require('./routes/university.route');
 
 const app = express();
 
-const PORT = config.get('port');
+const PORT = process.env.PORT || 5000;
 
 app.use(morgan('combined'));
 app.use(logger);
